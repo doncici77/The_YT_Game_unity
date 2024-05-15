@@ -46,9 +46,9 @@ public class UIManager : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
     }
 
-    public void ShowGameOver()
+    public void ShowGameOver(string message = "Game Over! Press 'R' to Restart")
     {
-        gameOverText.text = "Game Over! Press 'R' to Restart";
+        gameOverText.text = message;
         gameOverText.gameObject.SetActive(true);
         Time.timeScale = 0f; // 게임 일시정지
     }

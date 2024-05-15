@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public Transform bulletSpawnPoint;
     public float fireRate = 1f;
     public float bulletDamage = 10f;
-    public float attackRange = 10f;
+    public float attackRange = 50f; // 총알 최대 거리
 
     private float nextFireTime = 0f;
     private bool isGameOver = false;
@@ -40,18 +40,31 @@ public class PlayerController : MonoBehaviour
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, bulletSpawnPoint.rotation);
         Bullet bulletScript = bullet.GetComponent<Bullet>();
-        bulletScript.damage = bulletDamage; // 총알 데미지 설정
+        if (bulletScript != null)
+        {
+            bulletScript.damage = bulletDamage;
+            bulletScript.maxDistance = attackRange; // 총알 최대 거리 설정
+        }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (other.CompareTag("Enemy"))
+        if (collision.collider.CompareTag("Enemy"))
         {
-            Enemy enemy = other.GetComponent<Enemy>();
+            Enemy enemy = collision.collider.GetComponent<Enemy>();
             if (enemy != null)
             {
-                TakeDamage(enemy.health);
+                TakeDamage(enemy.health); // 적의 남은 체력만큼 데미지 입기
                 enemy.Die(); // 적 제거
+            }
+        }
+        else if (collision.collider.CompareTag("Boss"))
+        {
+            Boss boss = collision.collider.GetComponent<Boss>();
+            if (boss != null)
+            {
+                TakeDamage(boss.health); // 보스의 남은 체력만큼 데미지 입기
+                boss.TakeDamage(boss.health); // 플레이어와 충돌 시 보스도 데미지 입기 (선택 사항)
             }
         }
     }

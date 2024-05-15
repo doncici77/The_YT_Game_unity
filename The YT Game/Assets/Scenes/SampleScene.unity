@@ -1088,12 +1088,17 @@ MonoBehaviour:
   uiManager: {fileID: 0}
   statChoicePrefab: {fileID: 5900566551834574802, guid: c394de89213c40945ac81209eb119fd7, type: 3}
   enemyPrefab: {fileID: 5717506149149678381, guid: 8b642007fd72c394fa0d45f39ba6ba11, type: 3}
+  bossPrefabs:
+  - {fileID: 8184201770519661416, guid: 936d0d5a6b9582840bf0ede2a4540e58, type: 3}
   leftSpawnPoint: {fileID: 1268713011}
   rightSpawnPoint: {fileID: 614530080}
+  enemySpawnPoint: {fileID: 1077472371}
+  bossSpawnPoint: {fileID: 1347668640}
   initialStatSpawnDistance: 20
   statSpawnInterval: 30
   initialEnemySpawnDistance: 15
   enemySpawnInterval: 18
+  bossSpawnInterval: 100
   healthIncreaseValue: 5
   attackSpeedIncreaseValue: 0.5
   attackDamageIncreaseValue: 10
@@ -1654,6 +1659,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1770047238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1347668639
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1347668640}
+  m_Layer: 0
+  m_Name: Boss spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1347668640
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1347668639}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1349889067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2134,7 +2170,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -2224,13 +2260,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  moveSpeed: 10
+  moveSpeed: 5
   strafeSpeed: 3
   bulletPrefab: {fileID: 1931564071742004244, guid: 50ef69076086eca4088470fc098fea59, type: 3}
   bulletSpawnPoint: {fileID: 1245525318}
   fireRate: 1
   bulletDamage: 50
-  attackRange: 10
+  attackRange: 20
 --- !u!1 &1770047237
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,7 +2278,7 @@ GameObject:
   - component: {fileID: 1770047238}
   m_Layer: 0
   m_Name: Map
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2461,3 +2497,4 @@ SceneRoots:
   - {fileID: 1268713011}
   - {fileID: 614530080}
   - {fileID: 1077472371}
+  - {fileID: 1347668640}

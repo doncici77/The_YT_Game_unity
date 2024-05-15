@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,12 +9,16 @@ public class GameManager : MonoBehaviour
     public UIManager uiManager;
     public GameObject statChoicePrefab;
     public GameObject enemyPrefab;
+    public List<GameObject> bossPrefabs;  // 보스 프리팹 리스트
     public Transform leftSpawnPoint;
     public Transform rightSpawnPoint;
+    public Transform enemySpawnPoint;
+    public Transform bossSpawnPoint;  // 보스 스폰 포인트
     public float initialStatSpawnDistance = 20f;  // 스텟 선택지 최초 생성 거리
     public float statSpawnInterval = 20f;  // 스텟 선택지 생성 간격
     public float initialEnemySpawnDistance = 15f;  // 적 최초 생성 거리
     public float enemySpawnInterval = 15f;  // 적 생성 간격
+    public float bossSpawnInterval = 100f;  // 보스 생성 간격
     public float healthIncreaseValue = 5f;
     public float attackSpeedIncreaseValue = 0.5f;
     public float attackDamageIncreaseValue = 10f;
@@ -23,6 +28,8 @@ public class GameManager : MonoBehaviour
 
     private float nextStatSpawnZ;
     private float nextEnemySpawnZ;
+    private float nextBossSpawnZ;
+    private int bossCount = 0;  // 등장한 보스 수
 
     void Start()
     {
@@ -42,6 +49,7 @@ public class GameManager : MonoBehaviour
         // 처음 스폰 위치 설정 (플레이어의 현재 위치 + 초기 거리)
         nextStatSpawnZ = player.transform.position.z + initialStatSpawnDistance;
         nextEnemySpawnZ = player.transform.position.z + initialEnemySpawnDistance;
+        nextBossSpawnZ = player.transform.position.z + bossSpawnInterval;
 
         // 초기 스폰 위치부터 최대 스폰 거리까지 스텟 선택지와 적 생성
         while (nextStatSpawnZ <= maxSpawnDistance || nextEnemySpawnZ <= maxSpawnDistance)
@@ -74,6 +82,13 @@ public class GameManager : MonoBehaviour
             GenerateEnemy();
             nextEnemySpawnZ += enemySpawnInterval;
         }
+
+        // 보스 스폰
+        if (bossCount < bossPrefabs.Count && player.transform.position.z + spawnBufferDistance >= nextBossSpawnZ)
+        {
+            GenerateBoss();
+            nextBossSpawnZ += bossSpawnInterval;
+        }
     }
 
     public void ApplyStat(StatChoice.StatType statType, float amount)
@@ -104,6 +119,15 @@ public class GameManager : MonoBehaviour
         if (uiManager != null)
         {
             uiManager.UpdateScoreUI(points);
+        }
+    }
+
+    public void BossDefeated()
+    {
+        bossCount++;
+        if (bossCount >= bossPrefabs.Count)
+        {
+            EndGame();
         }
     }
 
@@ -149,5 +173,26 @@ public class GameManager : MonoBehaviour
         Transform spawnPoint = Random.value > 0.5f ? leftSpawnPoint : rightSpawnPoint;
         Vector3 spawnPosition = new Vector3(spawnPoint.position.x, spawnPoint.position.y, nextEnemySpawnZ);
         Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+    }
+
+    private void GenerateBoss()
+    {
+        if (bossCount < bossPrefabs.Count)
+        {
+            Vector3 spawnPosition = new Vector3(bossSpawnPoint.position.x, bossSpawnPoint.position.y, nextBossSpawnZ);
+            Instantiate(bossPrefabs[bossCount], spawnPosition, Quaternion.identity);
+        }
+    }
+
+    private void EndGame()
+    {
+        // 게임 엔딩 처리
+        Debug.Log("Game Ended! You defeated all bosses!");
+        // 게임 오버 UI 표시 등 추가적인 엔딩 처리를 여기에 작성
+        // 예: 게임 오버 화면 표시, 게임 재시작 버튼 등
+        if (uiManager != null)
+        {
+            uiManager.ShowGameOver("Game Ended! You defeated all bosses!");
+        }
     }
 }
