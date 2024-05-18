@@ -6,8 +6,10 @@ public class Enemy : MonoBehaviour
 {
     public float health = 100f;
     public int scoreValue = 10; // 적을 처치했을 때 얻는 점수
-    private Transform player; // 플레이어의 위치를 저장할 변수
+    public GameObject statBoxPrefab; // 스탯 상자 프리팹
     public float despawnDistance = 30f; // 플레이어와의 거리
+
+    private Transform player; // 플레이어의 위치를 저장할 변수
 
     void Start()
     {
@@ -40,7 +42,24 @@ public class Enemy : MonoBehaviour
         {
             gameManager.EnemyDefeated(scoreValue);
         }
+
+        // 스탯 상자 생성
+        GenerateStatBox();
+
         Destroy(gameObject);
+    }
+
+    void GenerateStatBox()
+    {
+        if (statBoxPrefab != null)
+        {
+            GameObject statBox = Instantiate(statBoxPrefab, transform.position, Quaternion.identity);
+            StatBox statBoxScript = statBox.GetComponent<StatBox>();
+
+            // 스탯 타입과 증가량을 랜덤으로 설정
+            statBoxScript.statType = (StatBox.StatType)Random.Range(0, System.Enum.GetValues(typeof(StatBox.StatType)).Length);
+            statBoxScript.amount = Random.Range(1, 5); // 예시: 1에서 5 사이의 랜덤 값
+        }
     }
 
     void UpdateHealthText()
