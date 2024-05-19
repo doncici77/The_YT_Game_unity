@@ -1007,6 +1007,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1718602725}
   uiManager: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+  statChoicePrefab: {fileID: 5900566551834574802, guid: c394de89213c40945ac81209eb119fd7, type: 3}
+  enemyPrefab: {fileID: 5717506149149678381, guid: 8b642007fd72c394fa0d45f39ba6ba11, type: 3}
+  bossPrefabs:
+  - {fileID: 8184201770519661416, guid: 936d0d5a6b9582840bf0ede2a4540e58, type: 3}
+  leftSpawnPoint: {fileID: 1268713011}
+  rightSpawnPoint: {fileID: 614530080}
+  enemySpawnPoint: {fileID: 1077472371}
+  bossSpawnPoint: {fileID: 1347668640}
+  initialStatSpawnDistance: 20
+  statSpawnInterval: 30
+  initialEnemySpawnDistance: 15
+  enemySpawnInterval: 18
+  bossSpawnInterval: 100
+  healthIncreaseValue: 5
+  attackSpeedIncreaseValue: 0.5
+  attackDamageIncreaseValue: 10
+  attackRangeIncreaseValue: 1
+  spawnBufferDistance: 120
+  maxSpawnDistance: 120
+  initialEnemyHealth: 100
+  enemyHealthIncreaseInterval: 2
+  enemyHealthIncrement: 10
+>>>>>>> Stashed changes
 --- !u!4 &901828065
 Transform:
   m_ObjectHideFlags: 0
@@ -1833,7 +1858,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+<<<<<<< Updated upstream
   moveSpeed: 1
+=======
+  maxHealth: 100
+  moveSpeed: 5
+  slowMoveSpeed: 2
+>>>>>>> Stashed changes
   strafeSpeed: 3
   bulletPrefab: {fileID: 1931564071742004244, guid: 50ef69076086eca4088470fc098fea59, type: 3}
   bulletSpawnPoint: {fileID: 1245525318}

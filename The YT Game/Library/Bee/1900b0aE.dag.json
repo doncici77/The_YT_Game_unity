@@ -36732,8 +36732,13 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp",
       "DisplayName": "Writing Assembly-CSharp.rsp",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 1445027,
       "PayloadLength": 33399,
+=======
+      "PayloadOffset": 1444974,
+      "PayloadLength": 33572,
+>>>>>>> Stashed changes
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
       "InputFlags": [],
@@ -36749,7 +36754,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp2",
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 1478513,
+=======
+      "PayloadOffset": 1478633,
+>>>>>>> Stashed changes
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
       "Inputs": [],
@@ -37028,6 +37037,7 @@
         "Library/Bee/artifacts/1900b0aE.dag/Unity.VisualStudio.Editor.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll",
+<<<<<<< Updated upstream
         "Assets/Scrept/Bullet.cs",
         "Assets/Scrept/CameraFollow.cs",
         "Assets/Scrept/Enemy.cs",
@@ -37036,6 +37046,21 @@
         "Assets/Scrept/StatChoice.cs",
         "Assets/Scrept/TransparencyController.cs",
         "Assets/Scrept/UIManager.cs",
+=======
+        "Assets/MainMenu Scripts/MainMenuManager.cs",
+        "Assets/Scripts/Boss.cs",
+        "Assets/Scripts/Boss3.cs",
+        "Assets/Scripts/Bullet.cs",
+        "Assets/Scripts/CameraFollow.cs",
+        "Assets/Scripts/Enemy.cs",
+        "Assets/Scripts/GameManager.cs",
+        "Assets/Scripts/PlayerController.cs",
+        "Assets/Scripts/StatBox.cs",
+        "Assets/Scripts/StatChoice.cs",
+        "Assets/Scripts/StatChoiceGroup.cs",
+        "Assets/Scripts/TransparencyController.cs",
+        "Assets/Scripts/UIManager.cs",
+>>>>>>> Stashed changes
         "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs",
         "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs",
         "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark02.cs",
@@ -37382,6 +37407,14 @@
         0,
         0,
         0,
+<<<<<<< Updated upstream
+=======
+        0,
+        0,
+        0,
+        0,
+        0,
+>>>>>>> Stashed changes
         8
       ],
       "Outputs": [
@@ -37664,7 +37697,11 @@
       "Annotation": "WriteText Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.dll.mvfrm.rsp",
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
+<<<<<<< Updated upstream
       "PayloadOffset": 1478609,
+=======
+      "PayloadOffset": 1478729,
+>>>>>>> Stashed changes
       "PayloadLength": 11954,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",
       "Inputs": [],
