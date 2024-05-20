@@ -11,19 +11,32 @@ D:\unity\2023.2.12f1\Editor\Unity.exe
 -name
 AssetImportWorker2
 -projectPath
+<<<<<<< Updated upstream
 D:/unity/test/3d shooting/The YT Game
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
 7780
+=======
+D:/Git/The_YT_Game_unity/The YT Game
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+4621
+>>>>>>> Stashed changes
 -job-worker-count
 5
 -background-job-worker-count
 8
 -asset-garbage-collectors
 1
+<<<<<<< Updated upstream
 Successfully changed project path to: D:/unity/test/3d shooting/The YT Game
 D:/unity/test/3d shooting/The YT Game
+=======
+Successfully changed project path to: D:/Git/The_YT_Game_unity/The YT Game
+D:/Git/The_YT_Game_unity/The YT Game
+>>>>>>> Stashed changes
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -58,6 +71,7 @@ D:/unity/test/3d shooting/The YT Game
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
 Player connection [30296] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 1358469187 [EditorId] 1358469187 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 Player connection [30296] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 1358469187 [EditorId] 1358469187 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
@@ -68,18 +82,38 @@ Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.12f1 (19eeb3b320af)
 [Subsystems] Discovering subsystems at path D:/unity/2023.2.12f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path D:/unity/test/3d shooting/The YT Game/Assets
+=======
+Player connection [1388] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 3891120108 [EditorId] 3891120108 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [1388] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 3891120108 [EditorId] 3891120108 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 1.93 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2023.2.12f1 (19eeb3b320af)
+[Subsystems] Discovering subsystems at path D:/unity/2023.2.12f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Git/The_YT_Game_unity/The YT Game/Assets
+>>>>>>> Stashed changes
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
     Renderer: NVIDIA GeForce RTX 2070 SUPER (ID=0x1e84)
     Vendor:   NVIDIA
     VRAM:     7989 MB
+<<<<<<< Updated upstream
     Driver:   31.0.15.5222
+=======
+    Driver:   31.0.15.5244
+>>>>>>> Stashed changes
 Initialize mono
 Mono path[0] = 'D:/unity/2023.2.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/unity/2023.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/unity/2023.2.12f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56028
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56972
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -95,25 +129,41 @@ Registering precompiled unity dll's ...
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.003208 seconds.
 - Loaded All Assemblies, in  0.980 seconds
+=======
+Registered in 0.004003 seconds.
+- Loaded All Assemblies, in  0.729 seconds
+>>>>>>> Stashed changes
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
+<<<<<<< Updated upstream
 Android Extension - Scanning For ADB Devices 667 ms
+=======
+Android Extension - Scanning For ADB Devices 372 ms
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  1.305 seconds
 Domain Reload Profiling: 2285ms
 	BeginReloadAssembly (171ms)
+=======
+- Finished resetting the current domain, in  0.985 seconds
+Domain Reload Profiling: 1715ms
+	BeginReloadAssembly (220ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 	RebuildCommonClasses (308ms)
 	RebuildNativeTypeToScriptingClass (15ms)
 	initialDomainReloadingComplete (48ms)
@@ -135,6 +185,29 @@ Domain Reload Profiling: 2285ms
 			BeforeProcessingInitializeOnLoad (8ms)
 			ProcessInitializeOnLoadAttributes (154ms)
 			ProcessInitializeOnLoadMethodAttributes (78ms)
+=======
+	RebuildCommonClasses (68ms)
+	RebuildNativeTypeToScriptingClass (24ms)
+	initialDomainReloadingComplete (78ms)
+	LoadAllAssembliesAndSetupDomain (338ms)
+		LoadAssemblies (219ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (333ms)
+			TypeCache.Refresh (331ms)
+				TypeCache.ScanAssembly (308ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (986ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (909ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (540ms)
+			SetLoadedEditorAssemblies (7ms)
+			BeforeProcessingInitializeOnLoad (16ms)
+			ProcessInitializeOnLoadAttributes (260ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -155,14 +228,22 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+<<<<<<< Updated upstream
 Symbol file LoadedFromMemory doesn't match image D:\unity\test\3d shooting\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\unity\test\3d shooting\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 - Loaded All Assemblies, in  1.463 seconds
 Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+=======
+Symbol file LoadedFromMemory doesn't match image D:\Git\The_YT_Game_unity\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Git\The_YT_Game_unity\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+- Loaded All Assemblies, in  1.107 seconds
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+>>>>>>> Stashed changes
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.643 seconds
 Domain Reload Profiling: 2106ms
 	BeginReloadAssembly (719ms)
@@ -230,10 +311,16 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.731 seconds
 Domain Reload Profiling: 1380ms
 	BeginReloadAssembly (221ms)
+=======
+- Finished resetting the current domain, in  0.806 seconds
+Domain Reload Profiling: 1913ms
+	BeginReloadAssembly (481ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 		CreateAndSetChildDomain (46ms)
 	RebuildCommonClasses (46ms)
 	RebuildNativeTypeToScriptingClass (16ms)
@@ -2100,3 +2187,43 @@ Received Import Request.
 Start importing Assets/SimpleNaturePack/Prefabs/Tree_05.prefab using Guid(60f79905accf3b24fa0114b941f1aac0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6209c96232eeb60faa52267d4d3b4686') in 0.0122814 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
 
+=======
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (54ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (504ms)
+		LoadAssemblies (399ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (269ms)
+			TypeCache.Refresh (229ms)
+				TypeCache.ScanAssembly (209ms)
+			BuildScriptInfoCaches (29ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (806ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (523ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (27ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (39ms)
+			ProcessInitializeOnLoadAttributes (421ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.64 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3189 unused Assets / (1.0 MB). Loaded Objects now: 3768.
+Memory consumption went from 125.9 MB to 125.0 MB.
+Total: 6.785000 ms (FindLiveObjects: 0.586900 ms CreateObjectMapping: 0.509400 ms MarkObjects: 4.563400 ms  DeleteObjects: 1.124100 ms)
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0
+>>>>>>> Stashed changes

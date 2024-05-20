@@ -36737,7 +36737,11 @@
       "PayloadLength": 33399,
 =======
       "PayloadOffset": 1444974,
+<<<<<<< Updated upstream
       "PayloadLength": 33572,
+>>>>>>> Stashed changes
+=======
+      "PayloadLength": 33545,
 >>>>>>> Stashed changes
       "PayloadDebugContentSnippet": "-target:library\r\n-out:\"Library",
       "Inputs": [],
@@ -36755,9 +36759,13 @@
       "DisplayName": "Writing Assembly-CSharp.rsp2",
       "ActionType": "WriteFile",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "PayloadOffset": 1478513,
 =======
       "PayloadOffset": 1478633,
+>>>>>>> Stashed changes
+=======
+      "PayloadOffset": 1478606,
 >>>>>>> Stashed changes
       "PayloadLength": 0,
       "PayloadDebugContentSnippet": "",
@@ -37038,6 +37046,7 @@
         "Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll",
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "Assets/Scrept/Bullet.cs",
         "Assets/Scrept/CameraFollow.cs",
         "Assets/Scrept/Enemy.cs",
@@ -37047,6 +37056,8 @@
         "Assets/Scrept/TransparencyController.cs",
         "Assets/Scrept/UIManager.cs",
 =======
+=======
+>>>>>>> Stashed changes
         "Assets/MainMenu Scripts/MainMenuManager.cs",
         "Assets/Scripts/Boss.cs",
         "Assets/Scripts/Boss3.cs",
@@ -37413,7 +37424,10 @@
         0,
         0,
         0,
+<<<<<<< Updated upstream
         0,
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
         8
       ],
@@ -37698,9 +37712,13 @@
       "DisplayName": "Writing Assembly-CSharp.dll.mvfrm.rsp",
       "ActionType": "WriteFile",
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       "PayloadOffset": 1478609,
 =======
       "PayloadOffset": 1478729,
+>>>>>>> Stashed changes
+=======
+      "PayloadOffset": 1478702,
 >>>>>>> Stashed changes
       "PayloadLength": 11954,
       "PayloadDebugContentSnippet": "Library\\Bee\\artifacts\\mvdfrm\\U",

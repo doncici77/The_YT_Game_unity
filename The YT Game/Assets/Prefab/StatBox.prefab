@@ -35,7 +35,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8045615530494132821}
+<<<<<<< Updated upstream
   - {fileID: 3015902646686345233}
+=======
+>>>>>>> Stashed changes
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6159600798223845734
@@ -152,6 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statType: 0
   amount: 0
+<<<<<<< Updated upstream
   statText: {fileID: 4390005979728395586}
 --- !u!1 &4271541195700150532
 GameObject:
@@ -391,6 +395,8 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+=======
+>>>>>>> Stashed changes
 --- !u!1001 &8045615530494531797
 PrefabInstance:
   m_ObjectHideFlags: 0

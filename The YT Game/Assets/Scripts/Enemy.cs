@@ -13,6 +13,8 @@ public class Enemy : MonoBehaviour
 
     private Transform player; // 플레이어의 위치를 저장할 변수
 
+    private Transform player; // 플레이어의 위치를 저장할 변수
+
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform; // 플레이어의 Transform을 가져옵니다.
@@ -58,13 +60,19 @@ public class Enemy : MonoBehaviour
         {
             GameObject statBox = Instantiate(statBoxPrefab, transform.position, Quaternion.identity);
             StatBox statBoxScript = statBox.GetComponent<StatBox>();
+<<<<<<< Updated upstream
             TextMeshProUGUI statText = statBox.GetComponentInChildren<TextMeshProUGUI>();
+=======
+>>>>>>> Stashed changes
 
             // 스탯 타입과 증가량을 랜덤으로 설정
             statBoxScript.statType = (StatBox.StatType)Random.Range(0, System.Enum.GetValues(typeof(StatBox.StatType)).Length);
             statBoxScript.amount = Random.Range(1, 5); // 예시: 1에서 5 사이의 랜덤 값
+<<<<<<< Updated upstream
             statBoxScript.statText = statText; // 텍스트 컴포넌트를 할당
             statBoxScript.UpdateStatText(); // 스탯 정보를 업데이트
+=======
+>>>>>>> Stashed changes
         }
     }
 

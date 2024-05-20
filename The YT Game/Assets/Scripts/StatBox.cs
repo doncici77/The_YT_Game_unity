@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+<<<<<<< Updated upstream
 using TMPro;
+=======
+>>>>>>> Stashed changes
 
 public class StatBox : MonoBehaviour
 {
@@ -15,12 +18,15 @@ public class StatBox : MonoBehaviour
 
     public StatType statType;
     public float amount;
+<<<<<<< Updated upstream
     public TextMeshProUGUI statText; // 스탯 정보 텍스트
 
     private void Start()
     {
         UpdateStatText();
     }
+=======
+>>>>>>> Stashed changes
 
     private void OnTriggerEnter(Collider other)
     {
@@ -43,7 +49,10 @@ public class StatBox : MonoBehaviour
         {
             case StatType.Health:
                 player.health += amount;
+<<<<<<< Updated upstream
                 player.maxHealth += amount;
+=======
+>>>>>>> Stashed changes
                 break;
             case StatType.AttackSpeed:
                 player.fireRate += amount;
@@ -63,6 +72,7 @@ public class StatBox : MonoBehaviour
             gameManager.uiManager.UpdateHealthUI(player.health);
         }
     }
+<<<<<<< Updated upstream
 
     public void UpdateStatText() // 메서드를 public으로 변경
     {
@@ -85,4 +95,6 @@ public class StatBox : MonoBehaviour
             }
         }
     }
+=======
+>>>>>>> Stashed changes
 }

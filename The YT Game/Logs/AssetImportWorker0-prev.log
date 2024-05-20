@@ -15,7 +15,15 @@ D:/Git/The_YT_Game_unity/The YT Game
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
+<<<<<<< Updated upstream
 4621
+=======
+<<<<<<< Updated upstream
+4621
+=======
+4614
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 -job-worker-count
 5
 -background-job-worker-count
@@ -58,12 +66,27 @@ D:/Git/The_YT_Game_unity/The YT Game
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 Player connection [7856] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 2980086154 [EditorId] 2980086154 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 Player connection [7856] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 2980086154 [EditorId] 2980086154 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
 [Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
 Library Redirect Path: Library/
 Refreshing native plugins compatible for Editor in 1.16 ms, found 3 plugins.
+<<<<<<< Updated upstream
+=======
+=======
+Player connection [17972] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 555046398 [EditorId] 555046398 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [17972] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 555046398 [EditorId] 555046398 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.12f1 (19eeb3b320af)
 [Subsystems] Discovering subsystems at path D:/unity/2023.2.12f1/Editor/Data/Resources/UnitySubsystems
@@ -79,7 +102,15 @@ Initialize mono
 Mono path[0] = 'D:/unity/2023.2.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/unity/2023.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/unity/2023.2.12f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
+=======
+<<<<<<< Updated upstream
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56904
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56316
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -95,25 +126,59 @@ Registering precompiled unity dll's ...
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+<<<<<<< Updated upstream
 Registered in 0.006582 seconds.
 - Loaded All Assemblies, in  1.402 seconds
+=======
+<<<<<<< Updated upstream
+Registered in 0.006582 seconds.
+- Loaded All Assemblies, in  1.402 seconds
+=======
+Registered in 0.003383 seconds.
+- Loaded All Assemblies, in  0.501 seconds
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
+<<<<<<< Updated upstream
 Android Extension - Scanning For ADB Devices 1752 ms
+=======
+<<<<<<< Updated upstream
+Android Extension - Scanning For ADB Devices 1752 ms
+=======
+Android Extension - Scanning For ADB Devices 2329 ms
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  3.072 seconds
 Domain Reload Profiling: 4468ms
 	BeginReloadAssembly (258ms)
+=======
+<<<<<<< Updated upstream
+- Finished resetting the current domain, in  3.072 seconds
+Domain Reload Profiling: 4468ms
+	BeginReloadAssembly (258ms)
+=======
+- Finished resetting the current domain, in  2.851 seconds
+Domain Reload Profiling: 3352ms
+	BeginReloadAssembly (174ms)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 	RebuildCommonClasses (205ms)
 	RebuildNativeTypeToScriptingClass (56ms)
 	initialDomainReloadingComplete (211ms)
@@ -136,6 +201,33 @@ Domain Reload Profiling: 4468ms
 			ProcessInitializeOnLoadAttributes (368ms)
 			ProcessInitializeOnLoadMethodAttributes (287ms)
 			AfterProcessingInitializeOnLoad (1ms)
+<<<<<<< Updated upstream
+=======
+=======
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (206ms)
+		LoadAssemblies (174ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (202ms)
+			TypeCache.Refresh (201ms)
+				TypeCache.ScanAssembly (184ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (2851ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (2787ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2460ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (10ms)
+			ProcessInitializeOnLoadAttributes (241ms)
+			ProcessInitializeOnLoadMethodAttributes (72ms)
+			AfterProcessingInitializeOnLoad (0ms)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (0ms)
@@ -157,12 +249,26 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image D:\Git\The_YT_Game_unity\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Git\The_YT_Game_unity\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  2.618 seconds
 Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+=======
+<<<<<<< Updated upstream
+- Loaded All Assemblies, in  2.618 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+=======
+- Loaded All Assemblies, in  0.987 seconds
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 - Finished resetting the current domain, in  0.985 seconds
 Domain Reload Profiling: 3603ms
 	BeginReloadAssembly (1879ms)
@@ -11600,10 +11706,22 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.698 seconds
 Domain Reload Profiling: 1433ms
 	BeginReloadAssembly (244ms)
+<<<<<<< Updated upstream
+=======
+=======
+- Finished resetting the current domain, in  0.752 seconds
+Domain Reload Profiling: 1738ms
+	BeginReloadAssembly (404ms)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 		CreateAndSetChildDomain (55ms)
 	RebuildCommonClasses (59ms)
 	RebuildNativeTypeToScriptingClass (17ms)
@@ -11625,10 +11743,40 @@ Domain Reload Profiling: 1433ms
 			SetLoadedEditorAssemblies (5ms)
 			BeforeProcessingInitializeOnLoad (46ms)
 			ProcessInitializeOnLoadAttributes (337ms)
+<<<<<<< Updated upstream
+=======
+=======
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (51ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (477ms)
+		LoadAssemblies (355ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (262ms)
+			TypeCache.Refresh (228ms)
+				TypeCache.ScanAssembly (206ms)
+			BuildScriptInfoCaches (23ms)
+			ResolveRequiredComponents (6ms)
+	FinalizeReload (752ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (464ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (24ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (42ms)
+			ProcessInitializeOnLoadAttributes (368ms)
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 			ProcessInitializeOnLoadMethodAttributes (23ms)
 			AfterProcessingInitializeOnLoad (2ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 		AwakeInstancesAfterBackupRestoration (13ms)
 Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -19629,10 +19777,43 @@ Received Import Request.
   artifactKey: Guid(2f66f74f1d9a5ea48beb0036581bc18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/HousePack/Perfabs/House10.prefab using Guid(2f66f74f1d9a5ea48beb0036581bc18d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09c6e5eff5a12a423e248a5b10089c0d') in 0.0478302 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 31
+<<<<<<< Updated upstream
+=======
+=======
+		AwakeInstancesAfterBackupRestoration (12ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3192 unused Assets / (1.0 MB). Loaded Objects now: 3769.
+Memory consumption went from 125.3 MB to 124.3 MB.
+Total: 7.263900 ms (FindLiveObjects: 0.582800 ms CreateObjectMapping: 0.725400 ms MarkObjects: 4.546500 ms  DeleteObjects: 1.407500 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 4007.882850 seconds.
+  path: Assets/Prefab/Enemy.prefab
+  artifactKey: Guid(c53c6dcccc978b8488c229db51d3fe39) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemy.prefab using Guid(c53c6dcccc978b8488c229db51d3fe39) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09ec12c7d1aeb3d35ce7eae60bb493fc') in 0.3387988 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 71
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.382237 seconds.
+  path: Assets/Boss1.prefab
+  artifactKey: Guid(89169f3dbbee7c941871c92011ee726a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Boss1.prefab using Guid(89169f3dbbee7c941871c92011ee726a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7f24633b6d541d3843b412d7cedc80fd') in 0.0304715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 35
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000021 seconds.
+<<<<<<< Updated upstream
+=======
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
   path: Assets/HousePack/Perfabs/House8.prefab
   artifactKey: Guid(84d816b90a9224a46a067fbdcdc7ad63) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/HousePack/Perfabs/House8.prefab using Guid(84d816b90a9224a46a067fbdcdc7ad63) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a6b479498e577961f685f37ec47cf276') in 0.0246244 seconds
@@ -19649,4 +19830,15 @@ Number of updated asset objects reloaded before import = 0Number of asset object
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting
+<<<<<<< Updated upstream
 Exiting without the bug reporter. Application will terminate with return code 0
+=======
+Exiting without the bug reporter. Application will terminate with return code 0
+=======
+  path: Assets/bullet.prefab
+  artifactKey: Guid(50ef69076086eca4088470fc098fea59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/bullet.prefab using Guid(50ef69076086eca4088470fc098fea59) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '077912587608e0592b731fe762720012') in 0.0401061 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes

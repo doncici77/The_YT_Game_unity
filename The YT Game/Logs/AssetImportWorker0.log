@@ -16,9 +16,13 @@ D:/unity/test/3d shooting/The YT Game
 Logs/AssetImportWorker0.log
 -srvPort
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 7780
 =======
 4245
+>>>>>>> Stashed changes
+=======
+6583
 >>>>>>> Stashed changes
 -job-worker-count
 5
@@ -63,6 +67,7 @@ D:/unity/test/3d shooting/The YT Game
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Player connection [24224] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 273816704 [EditorId] 273816704 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 Player connection [24224] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 273816704 [EditorId] 273816704 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 5
@@ -76,6 +81,14 @@ JobSystem: Creating JobQueue using job-worker-count value 5
 [Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
 Library Redirect Path: Library/
 Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+>>>>>>> Stashed changes
+=======
+Player connection [14764] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 1518971043 [EditorId] 1518971043 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [14764] Host "[IP] 192.168.0.2 [Port] 0 [Flags] 2 [Guid] 1518971043 [EditorId] 1518971043 [Version] 1048832 [Id] WindowsEditor(7,DESKTOP-P4PSO4I) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 5
+[Physics::Module] Initialized MultithreadedJobDispatcher with 5 workers.
+Library Redirect Path: Library/
+Refreshing native plugins compatible for Editor in 1.29 ms, found 3 plugins.
 >>>>>>> Stashed changes
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2023.2.12f1 (19eeb3b320af)
@@ -93,9 +106,13 @@ Mono path[0] = 'D:/unity/2023.2.12f1/Editor/Data/Managed'
 Mono path[1] = 'D:/unity/2023.2.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/unity/2023.2.12f1/Editor/Data/MonoBleedingEdge/etc'
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56148
 =======
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56888
+>>>>>>> Stashed changes
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56964
 >>>>>>> Stashed changes
 Begin MonoManager ReloadAssembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
@@ -113,16 +130,22 @@ Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngin
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/unity/2023.2.12f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Registered in 0.003318 seconds.
 - Loaded All Assemblies, in  0.467 seconds
 =======
 Registered in 0.004347 seconds.
 - Loaded All Assemblies, in  0.512 seconds
 >>>>>>> Stashed changes
+=======
+Registered in 0.003359 seconds.
+- Loaded All Assemblies, in  0.610 seconds
+>>>>>>> Stashed changes
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 CommandWithNoStdoutInvokationFailure: Unable to start ADB server. Please make sure the Android SDK is installed and is properly configured in the Editor. See the Console for more details.
   at UnityEditor.Android.Command.RunWithShellExecute (System.String command, System.String args, System.String workingdir, System.String errorMsg) [0x00060] in <c254914bb04e483c9ad56f232bc57340>:0 
@@ -142,19 +165,29 @@ Domain Reload Profiling: 6986ms
 	BeginReloadAssembly (148ms)
 =======
 Android Extension - Scanning For ADB Devices 333 ms
+=======
+Android Extension - Scanning For ADB Devices 420 ms
+>>>>>>> Stashed changes
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.803 seconds
 Domain Reload Profiling: 1315ms
 	BeginReloadAssembly (166ms)
+>>>>>>> Stashed changes
+=======
+- Finished resetting the current domain, in  1.017 seconds
+Domain Reload Profiling: 1626ms
+	BeginReloadAssembly (199ms)
 >>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 	RebuildCommonClasses (43ms)
 	RebuildNativeTypeToScriptingClass (15ms)
@@ -200,6 +233,29 @@ Domain Reload Profiling: 1315ms
 			ProcessInitializeOnLoadAttributes (185ms)
 			ProcessInitializeOnLoadMethodAttributes (68ms)
 >>>>>>> Stashed changes
+=======
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (23ms)
+	initialDomainReloadingComplete (60ms)
+	LoadAllAssembliesAndSetupDomain (279ms)
+		LoadAssemblies (198ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (275ms)
+			TypeCache.Refresh (274ms)
+				TypeCache.ScanAssembly (252ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (1017ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (933ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (606ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (12ms)
+			ProcessInitializeOnLoadAttributes (237ms)
+			ProcessInitializeOnLoadMethodAttributes (72ms)
+>>>>>>> Stashed changes
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -228,6 +284,7 @@ Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
 =======
 Symbol file LoadedFromMemory doesn't match image D:\Git\The_YT_Game_unity\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Git\The_YT_Game_unity\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+<<<<<<< Updated upstream
 - Loaded All Assemblies, in  0.910 seconds
 Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 >>>>>>> Stashed changes
@@ -319,11 +376,15 @@ C:\build\output\Unity-Technologies\mono\mono\metadata\icall.c:1842:
 Symbol file LoadedFromMemory doesn't match image D:\unity\test\3d shooting\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\unity\test\3d shooting\The YT Game\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 - Loaded All Assemblies, in  0.639 seconds
+=======
+- Loaded All Assemblies, in  1.243 seconds
+>>>>>>> Stashed changes
 Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
+<<<<<<< Updated upstream
 - Finished resetting the current domain, in  0.664 seconds
 Domain Reload Profiling: 1304ms
 	BeginReloadAssembly (220ms)
@@ -481,10 +542,16 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.806 seconds
 Domain Reload Profiling: 1527ms
 	BeginReloadAssembly (236ms)
+=======
+- Finished resetting the current domain, in  0.857 seconds
+Domain Reload Profiling: 2100ms
+	BeginReloadAssembly (552ms)
+>>>>>>> Stashed changes
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (10ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< Updated upstream
 		CreateAndSetChildDomain (49ms)
 	RebuildCommonClasses (56ms)
 	RebuildNativeTypeToScriptingClass (16ms)
@@ -51601,10 +51668,45 @@ Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 3182 unused Assets / (0.7 MB). Loaded Objects now: 3801.
 Memory consumption went from 182.2 MB to 181.5 MB.
 Total: 7.421700 ms (FindLiveObjects: 0.475300 ms CreateObjectMapping: 0.548600 ms MarkObjects: 5.354000 ms  DeleteObjects: 1.041800 ms)
+=======
+		CreateAndSetChildDomain (65ms)
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (25ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (543ms)
+		LoadAssemblies (464ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (284ms)
+			TypeCache.Refresh (237ms)
+				TypeCache.ScanAssembly (215ms)
+			BuildScriptInfoCaches (33ms)
+			ResolveRequiredComponents (8ms)
+	FinalizeReload (858ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (574ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (33ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (443ms)
+			ProcessInitializeOnLoadMethodAttributes (35ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.89 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 25 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3191 unused Assets / (1.0 MB). Loaded Objects now: 3786.
+Memory consumption went from 135.0 MB to 134.0 MB.
+Total: 9.073500 ms (FindLiveObjects: 0.385000 ms CreateObjectMapping: 0.542200 ms MarkObjects: 6.537100 ms  DeleteObjects: 1.608200 ms)
+>>>>>>> Stashed changes
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
   Time since last request: 443.292636 seconds.
   path: Assets/Prefab/StatBox.prefab
   artifactKey: Guid(e56880549fbf21f4881ff2210b4e0b1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
@@ -58518,4 +58620,14 @@ Memory consumption went from 193.4 MB to 192.2 MB.
 Total: 6.577900 ms (FindLiveObjects: 0.416600 ms CreateObjectMapping: 0.610000 ms MarkObjects: 4.111200 ms  DeleteObjects: 1.439000 ms)
 
 Prepare: number of updated asset objects reloaded= 0
+>>>>>>> Stashed changes
+=======
+  Time since last request: 6019.124513 seconds.
+  path: Assets/Prefab/Enemy.prefab
+  artifactKey: Guid(8b642007fd72c394fa0d45f39ba6ba11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefab/Enemy.prefab using Guid(8b642007fd72c394fa0d45f39ba6ba11) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6557ffeec9c77a035fcc145028b2ddc1') in 0.2810113 seconds
+Internal: There are remaining Allocations on the JobTempAlloc. This is a leak, and will impact performance
+To Debug, run app with -diag-job-temp-memory-leak-validation cmd line argument. This will output the callstacks of the leaked allocations.
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 88
+
 >>>>>>> Stashed changes

@@ -1092,7 +1092,10 @@ MonoBehaviour:
   scoreValue: 10
   statBoxPrefab: {fileID: 2823894820261018090, guid: e56880549fbf21f4881ff2210b4e0b1c, type: 3}
   despawnDistance: 30
+<<<<<<< Updated upstream
   healthText: {fileID: 2441253271961746292}
+=======
+>>>>>>> Stashed changes
 --- !u!54 &3434676574437248225
 Rigidbody:
   m_ObjectHideFlags: 0

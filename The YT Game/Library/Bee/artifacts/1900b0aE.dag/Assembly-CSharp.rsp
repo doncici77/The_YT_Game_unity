@@ -390,6 +390,7 @@
 -analyzer:"D:/unity/2023.2.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"D:/unity/2023.2.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 "Assets/Scrept/Bullet.cs"
 "Assets/Scrept/CameraFollow.cs"
 "Assets/Scrept/Enemy.cs"
@@ -399,19 +400,42 @@
 "Assets/Scrept/TransparencyController.cs"
 "Assets/Scrept/UIManager.cs"
 =======
+=======
+>>>>>>> Stashed changes
 "Assets/MainMenu Scripts/MainMenuManager.cs"
 "Assets/Scripts/Boss.cs"
 "Assets/Scripts/Boss3.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CameraFollow.cs"
+=======
+"Assets/Scrept/Boss3.cs"
+"Assets/Scrept/Bullet.cs"
+"Assets/Scrept/CameraFollow.cs"
+"Assets/Scrept/Enemy.cs"
+"Assets/Scrept/GameManager.cs"
+"Assets/Scrept/PlayerController.cs"
+"Assets/Scrept/StatChoice.cs"
+"Assets/Scrept/TransparencyController.cs"
+"Assets/Scrept/UIManager.cs"
+"Assets/Scripts/Boss.cs"
+>>>>>>> Stashed changes
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameManager.cs"
+<<<<<<< Updated upstream
 "Assets/Scripts/PlayerController.cs"
 "Assets/Scripts/StatBox.cs"
+=======
+"Assets/Scripts/StatBox.cs"
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
 "Assets/Scripts/StatChoice.cs"
 "Assets/Scripts/StatChoiceGroup.cs"
 "Assets/Scripts/TransparencyController.cs"
 "Assets/Scripts/UIManager.cs"
+<<<<<<< Updated upstream
+=======
+=======
+>>>>>>> Stashed changes
 >>>>>>> Stashed changes
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"
