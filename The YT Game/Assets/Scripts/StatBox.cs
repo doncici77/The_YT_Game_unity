@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class StatBox : MonoBehaviour
 {
@@ -14,6 +15,12 @@ public class StatBox : MonoBehaviour
 
     public StatType statType;
     public float amount;
+    public TextMeshProUGUI statText; // 스탯 정보 텍스트
+
+    private void Start()
+    {
+        UpdateStatText();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -36,6 +43,7 @@ public class StatBox : MonoBehaviour
         {
             case StatType.Health:
                 player.health += amount;
+                player.maxHealth += amount;
                 break;
             case StatType.AttackSpeed:
                 player.fireRate += amount;
@@ -53,6 +61,28 @@ public class StatBox : MonoBehaviour
         if (gameManager != null && gameManager.uiManager != null)
         {
             gameManager.uiManager.UpdateHealthUI(player.health);
+        }
+    }
+
+    public void UpdateStatText() // 메서드를 public으로 변경
+    {
+        if (statText != null)
+        {
+            switch (statType)
+            {
+                case StatType.Health:
+                    statText.text = "Health + " + amount.ToString();
+                    break;
+                case StatType.AttackSpeed:
+                    statText.text = "Attack Speed + " + amount.ToString();
+                    break;
+                case StatType.AttackDamage:
+                    statText.text = "Attack Damage + " + amount.ToString();
+                    break;
+                case StatType.AttackRange:
+                    statText.text = "Attack Range + " + amount.ToString();
+                    break;
+            }
         }
     }
 }

@@ -427,8 +427,8 @@ MonoBehaviour:
   healthText: {fileID: 2173918916191034940}
   bulletPrefab: {fileID: 1931564071742004244, guid: 50ef69076086eca4088470fc098fea59, type: 3}
   bulletSpawnPoint: {fileID: 2367621734067604755}
-  fireRate: 1
-  bulletRange: 20
+  fireRate: 0
+  bulletRange: 0
 --- !u!1001 &7992581384106032820
 PrefabInstance:
   m_ObjectHideFlags: 0

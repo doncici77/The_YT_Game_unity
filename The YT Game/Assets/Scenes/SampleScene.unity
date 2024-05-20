@@ -2774,6 +2774,9 @@ MonoBehaviour:
   attackRangeIncreaseValue: 1
   spawnBufferDistance: 120
   maxSpawnDistance: 120
+  initialEnemyHealth: 100
+  enemyHealthIncreaseInterval: 30
+  enemyHealthIncrement: 10
 --- !u!4 &901828065
 Transform:
   m_ObjectHideFlags: 0
@@ -5512,7 +5515,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  maxHealth: 100
   moveSpeed: 5
+  slowMoveSpeed: 2
   strafeSpeed: 3
   bulletPrefab: {fileID: 1931564071742004244, guid: 50ef69076086eca4088470fc098fea59, type: 3}
   bulletSpawnPoint: {fileID: 1245525318}

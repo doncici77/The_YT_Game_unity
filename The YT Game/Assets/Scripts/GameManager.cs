@@ -25,11 +25,16 @@ public class GameManager : MonoBehaviour
     public float attackRangeIncreaseValue = 1f;
     public float spawnBufferDistance = 10f; // 플레이어와 스폰 위치 사이의 거리
     public float maxSpawnDistance = 120f; // 최대 스폰 거리
+    public float initialEnemyHealth = 100f; // 초기 적 체력
+    public float enemyHealthIncreaseInterval = 30f; // 적 체력 증가 간격 (초)
+    public float enemyHealthIncrement = 10f; // 적 체력 증가량
 
     private float nextStatSpawnZ;
     private float nextEnemySpawnZ;
     private float nextBossSpawnZ;
     private int bossCount = 0;  // 등장한 보스 수
+    private float currentEnemyHealth;
+    private float timeSinceLastIncrease;
 
     void Start()
     {
@@ -46,10 +51,12 @@ public class GameManager : MonoBehaviour
             Debug.LogError("UIManager is not assigned in the inspector and cannot be found in the scene.");
         }
 
-        // 처음 스폰 위치 설정 (플레이어의 현재 위치 + 초기 거리)
+        // 초기화
         nextStatSpawnZ = player.transform.position.z + initialStatSpawnDistance;
         nextEnemySpawnZ = player.transform.position.z + initialEnemySpawnDistance;
         nextBossSpawnZ = player.transform.position.z + bossSpawnInterval;
+        currentEnemyHealth = initialEnemyHealth;
+        timeSinceLastIncrease = 0f;
 
         // 초기 스폰 위치부터 최대 스폰 거리까지 스텟 선택지와 적 생성
         while (nextStatSpawnZ <= maxSpawnDistance || nextEnemySpawnZ <= maxSpawnDistance)
@@ -70,6 +77,14 @@ public class GameManager : MonoBehaviour
 
     void Update()
     {
+        // 적 체력 증가 로직
+        timeSinceLastIncrease += Time.deltaTime;
+        if (timeSinceLastIncrease >= enemyHealthIncreaseInterval)
+        {
+            currentEnemyHealth += enemyHealthIncrement;
+            timeSinceLastIncrease = 0f;
+        }
+
         // 플레이어가 스폰 버퍼 거리까지 도달했을 때 추가 스폰
         if (player.transform.position.z + spawnBufferDistance >= nextStatSpawnZ)
         {
@@ -97,6 +112,7 @@ public class GameManager : MonoBehaviour
         {
             case StatChoice.StatType.Health:
                 player.health += amount;
+                player.maxHealth += amount; // 최대 체력도 증가
                 break;
             case StatChoice.StatType.AttackSpeed:
                 player.fireRate += amount;
@@ -129,6 +145,16 @@ public class GameManager : MonoBehaviour
         {
             EndGame();
         }
+    }
+
+    public void GameOver()
+    {
+        Debug.Log("Game Over! The boss's health was greater than yours.");
+        if (uiManager != null)
+        {
+            uiManager.ShowGameOver("Game Over! The boss's health was greater than yours.");
+        }
+        Time.timeScale = 0f; // 게임 일시정지
     }
 
     private void GenerateStatChoices()
@@ -172,7 +198,12 @@ public class GameManager : MonoBehaviour
         // 랜덤하게 왼쪽이나 오른쪽 선택
         Transform spawnPoint = Random.value > 0.5f ? leftSpawnPoint : rightSpawnPoint;
         Vector3 spawnPosition = new Vector3(spawnPoint.position.x, spawnPoint.position.y, nextEnemySpawnZ);
-        Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        GameObject enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        Enemy enemyScript = enemy.GetComponent<Enemy>();
+        if (enemyScript != null)
+        {
+            enemyScript.health = currentEnemyHealth;
+        }
     }
 
     private void GenerateBoss()

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Enemy : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class Enemy : MonoBehaviour
     public int scoreValue = 10; // 적을 처치했을 때 얻는 점수
     public GameObject statBoxPrefab; // 스탯 상자 프리팹
     public float despawnDistance = 30f; // 플레이어와의 거리
+    public TextMeshProUGUI healthText; // 적 체력 텍스트
 
     private Transform player; // 플레이어의 위치를 저장할 변수
 
@@ -29,6 +31,7 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(float amount)
     {
         health -= amount;
+        UpdateHealthText();
         if (health <= 0f)
         {
             Die();
@@ -55,15 +58,21 @@ public class Enemy : MonoBehaviour
         {
             GameObject statBox = Instantiate(statBoxPrefab, transform.position, Quaternion.identity);
             StatBox statBoxScript = statBox.GetComponent<StatBox>();
+            TextMeshProUGUI statText = statBox.GetComponentInChildren<TextMeshProUGUI>();
 
             // 스탯 타입과 증가량을 랜덤으로 설정
             statBoxScript.statType = (StatBox.StatType)Random.Range(0, System.Enum.GetValues(typeof(StatBox.StatType)).Length);
             statBoxScript.amount = Random.Range(1, 5); // 예시: 1에서 5 사이의 랜덤 값
+            statBoxScript.statText = statText; // 텍스트 컴포넌트를 할당
+            statBoxScript.UpdateStatText(); // 스탯 정보를 업데이트
         }
     }
 
     void UpdateHealthText()
     {
-        // 건강 텍스트 업데이트
+        if (healthText != null)
+        {
+            healthText.text = "HP: " + health.ToString();
+        }
     }
 }

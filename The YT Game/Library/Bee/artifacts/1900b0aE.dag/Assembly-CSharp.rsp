@@ -391,6 +391,7 @@
 -analyzer:"D:/unity/2023.2.12f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/MainMenu Scripts/MainMenuManager.cs"
 "Assets/Scripts/Boss.cs"
+"Assets/Scripts/Boss3.cs"
 "Assets/Scripts/Bullet.cs"
 "Assets/Scripts/CameraFollow.cs"
 "Assets/Scripts/Enemy.cs"

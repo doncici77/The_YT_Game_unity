@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float health = 100f;
+    public float maxHealth = 100f; // 최대 체력
     public float moveSpeed = 5f;
+    public float slowMoveSpeed = 2f; // 전진 속도가 줄어든 상태의 속도
     public float strafeSpeed = 2f;
     public GameObject bulletPrefab;
     public Transform bulletSpawnPoint;
@@ -15,14 +17,18 @@ public class PlayerController : MonoBehaviour
 
     private float nextFireTime = 0f;
     private bool isGameOver = false;
+    private bool isSlowed = false; // 전진 속도가 줄어든 상태인지 여부
 
     void Update()
     {
         if (isGameOver)
             return;
 
+        // 전진 속도 조절
+        float currentMoveSpeed = isSlowed ? slowMoveSpeed : moveSpeed;
+
         // 자동 전진
-        transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        transform.Translate(Vector3.forward * currentMoveSpeed * Time.deltaTime);
 
         // 좌우 이동
         float strafe = Input.GetAxis("Horizontal") * strafeSpeed * Time.deltaTime;
@@ -57,6 +63,9 @@ public class PlayerController : MonoBehaviour
                 TakeDamage(enemy.health); // 적의 남은 체력만큼 데미지 입기
                 enemy.Die(); // 적 제거
             }
+
+            // 충돌 시 물리적 힘 제거
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
         else if (collision.collider.CompareTag("Boss"))
         {
@@ -66,6 +75,9 @@ public class PlayerController : MonoBehaviour
                 TakeDamage(boss.health); // 보스의 남은 체력만큼 데미지 입기
                 boss.TakeDamage(boss.health); // 플레이어와 충돌 시 보스도 데미지 입기 (선택 사항)
             }
+
+            // 충돌 시 물리적 힘 제거
+            GetComponent<Rigidbody>().velocity = Vector3.zero;
         }
     }
 
@@ -77,6 +89,17 @@ public class PlayerController : MonoBehaviour
             Die();
         }
 
+        // UI 업데이트
+        GameManager gameManager = FindObjectOfType<GameManager>();
+        if (gameManager != null)
+        {
+            gameManager.uiManager.UpdateHealthUI(health); // 'this'를 사용하여 현재 인스턴스의 health 참조
+        }
+    }
+
+    public void HealToFull()
+    {
+        health = maxHealth;
         // UI 업데이트
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
@@ -98,5 +121,10 @@ public class PlayerController : MonoBehaviour
         }
         // 게임 일시정지
         Time.timeScale = 0f;
+    }
+
+    public void SetSlowed(bool slowed)
+    {
+        isSlowed = slowed;
     }
 }
