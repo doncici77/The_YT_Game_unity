@@ -16,16 +16,20 @@ public class Boss : MonoBehaviour
     public float moveRange = 5f; // 좌우 이동 범위
     public float slowDistance = 10f; // 플레이어와의 거리
     public float despawnDistance = 10f; // 플레이어를 지나쳤을 때의 거리
+    public AudioClip hitSound; // 보스가 맞았을 때의 사운드
+    public AudioClip fireSound; // 총알 발사 사운드 클립
 
     private float nextFireTime = 0f;
     private Vector3 initialPosition;
     private bool movingRight = true;
     private Transform player;
+    private AudioSource audioSource; // 오디오 소스 컴포넌트
 
     void Start()
     {
         initialPosition = transform.position;
         player = GameObject.FindGameObjectWithTag("Player").transform; // 플레이어의 Transform을 가져옵니다.
+        audioSource = GetComponent<AudioSource>();
         UpdateHealthText();
     }
 
@@ -73,6 +77,13 @@ public class Boss : MonoBehaviour
     {
         health -= amount;
         UpdateHealthText();
+        
+        // 보스가 맞았을 때의 사운드 재생
+        if (hitSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hitSound);
+        }
+
         if (health <= 0f)
         {
             Die();
@@ -119,11 +130,16 @@ public class Boss : MonoBehaviour
     void FireBullet(Vector3 direction)
     {
         GameObject bullet = Instantiate(bulletPrefab, bulletSpawnPoint.position, Quaternion.LookRotation(direction));
-        Bullet bulletScript = bullet.GetComponent<Bullet>();
+        BossBullet bulletScript = bullet.GetComponent<BossBullet>();
         if (bulletScript != null)
         {
             bulletScript.damage = 20f; // 보스 총알 데미지 설정
-            bulletScript.maxDistance = bulletRange; // 총알 최대 거리 설정
+        }
+
+        // 총알 발사 사운드 재생
+        if (fireSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fireSound);
         }
     }
 

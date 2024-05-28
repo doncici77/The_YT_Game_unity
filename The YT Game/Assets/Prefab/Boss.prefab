@@ -422,13 +422,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63a168d669eee504fbeb824e592a7c6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 300
+  health: 1000
   scoreValue: 100
   healthText: {fileID: 2173918916191034940}
   bulletPrefab: {fileID: 1931564071742004244, guid: 50ef69076086eca4088470fc098fea59, type: 3}
   bulletSpawnPoint: {fileID: 2367621734067604755}
   fireRate: 0
   bulletRange: 0
+  moveSpeed: 2
+  moveRange: 4
+  slowDistance: 10
+  despawnDistance: 10
 --- !u!1001 &7992581384106032820
 PrefabInstance:
   m_ObjectHideFlags: 0

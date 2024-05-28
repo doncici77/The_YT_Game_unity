@@ -287,8 +287,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   statType: 0
-  amount: 0
+  amount: 50
   statText: {fileID: 4235226716700084779}
+  pickupSound: {fileID: 8300000, guid: cfce0cea076109f478783201b2a9f57f, type: 3}
+  pickupSoundVolume: 0.3
 --- !u!1 &7979532147148962280
 GameObject:
   m_ObjectHideFlags: 0

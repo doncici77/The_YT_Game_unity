@@ -5,51 +5,83 @@ using TMPro;
 
 public class StatChoice : MonoBehaviour
 {
-    public enum StatType { Health, AttackSpeed, AttackDamage, AttackRange }
-    public StatType statType;
-    public float amount = 1f;
-    private bool isActive = true;
-    public TextMeshProUGUI statText;  // 텍스트 컴포넌트 참조
-    public StatChoiceGroup statChoiceGroup; // 선택지 그룹 참조
-
-    void Start()
+    public enum StatType
     {
-        // 선택지 텍스트 설정
+        Health,
+        AttackSpeed,
+        AttackDamage,
+        AttackRange
+    }
+
+    public StatType statType;
+    public float amount;
+    public TextMeshProUGUI statText; // 선택지 텍스트
+    public StatChoiceGroup statChoiceGroup; // 선택지 그룹
+
+    private void Start()
+    {
+        UpdateStatText();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            PlayerController player = other.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                ApplyStat(player);
+                statChoiceGroup.ChooseStat(gameObject); // 선택지 그룹에서 선택 처리
+            }
+        }
+    }
+
+    void ApplyStat(PlayerController player)
+    {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+
+        switch (statType)
+        {
+            case StatType.Health:
+                player.health += amount;
+                player.maxHealth += amount;
+                gameManager?.uiManager.UpdateHealthUI(player.health);
+                break;
+            case StatType.AttackSpeed:
+                player.fireRate += amount;
+                gameManager?.uiManager.UpdateAttackSpeedUI(player.fireRate);
+                break;
+            case StatType.AttackDamage:
+                player.bulletDamage += amount;
+                gameManager?.uiManager.UpdateAttackDamageUI(player.bulletDamage);
+                break;
+            case StatType.AttackRange:
+                player.attackRange += amount;
+                gameManager?.uiManager.UpdateAttackRangeUI(player.attackRange);
+                break;
+        }
+
+        AudioManager.instance.PlaySound(AudioManager.instance.choiceSound); // 선택지 지나갈 때 사운드 재생
+    }
+
+    public void UpdateStatText()
+    {
         if (statText != null)
         {
             switch (statType)
             {
                 case StatType.Health:
-                    statText.text = "HEALTH +" + amount.ToString();
+                    statText.text = "Health + " + amount.ToString();
                     break;
                 case StatType.AttackSpeed:
-                    statText.text = "ATTACK SPEED +" + amount.ToString();
+                    statText.text = "Speed + " + amount.ToString();
                     break;
                 case StatType.AttackDamage:
-                    statText.text = "DAMAGE +" + amount.ToString();
+                    statText.text = "Damage + " + amount.ToString();
                     break;
                 case StatType.AttackRange:
-                    statText.text = "RANGE +" + amount.ToString();
+                    statText.text = "Range + " + amount.ToString();
                     break;
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (isActive && other.CompareTag("Player"))
-        {
-            GameManager gameManager = FindObjectOfType<GameManager>();
-            if (gameManager != null)
-            {
-                gameManager.ApplyStat(statType, amount);
-                isActive = false;
-
-                // 그룹 내 모든 선택지 비활성화
-                if (statChoiceGroup != null)
-                {
-                    statChoiceGroup.DisableChoices();
-                }
             }
         }
     }

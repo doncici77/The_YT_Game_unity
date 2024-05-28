@@ -16,6 +16,8 @@ public class StatBox : MonoBehaviour
     public StatType statType;
     public float amount;
     public TextMeshProUGUI statText; // 스탯 정보 텍스트
+    public AudioClip pickupSound; // 박스를 먹었을 때의 사운드
+    public float pickupSoundVolume = 1.0f; // 박스를 먹었을 때 사운드 볼륨
 
     private void Start()
     {
@@ -32,6 +34,12 @@ public class StatBox : MonoBehaviour
                 ApplyStat(player);
             }
 
+            // 박스를 먹었을 때의 사운드 재생
+            if (pickupSound != null)
+            {
+                AudioHelper.PlayClipAtPoint(pickupSound, transform.position, pickupSoundVolume);
+            }
+
             // 상자를 파괴
             Destroy(gameObject);
         }
@@ -39,32 +47,31 @@ public class StatBox : MonoBehaviour
 
     void ApplyStat(PlayerController player)
     {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+
         switch (statType)
         {
             case StatType.Health:
                 player.health += amount;
                 player.maxHealth += amount;
+                gameManager?.uiManager.UpdateHealthUI(player.health);
                 break;
             case StatType.AttackSpeed:
                 player.fireRate += amount;
+                gameManager?.uiManager.UpdateAttackSpeedUI(player.fireRate);
                 break;
             case StatType.AttackDamage:
                 player.bulletDamage += amount;
+                gameManager?.uiManager.UpdateAttackDamageUI(player.bulletDamage);
                 break;
             case StatType.AttackRange:
                 player.attackRange += amount;
+                gameManager?.uiManager.UpdateAttackRangeUI(player.attackRange);
                 break;
-        }
-
-        // UI 업데이트
-        GameManager gameManager = FindObjectOfType<GameManager>();
-        if (gameManager != null && gameManager.uiManager != null)
-        {
-            gameManager.uiManager.UpdateHealthUI(player.health);
         }
     }
 
-    public void UpdateStatText() // 메서드를 public으로 변경
+    public void UpdateStatText()
     {
         if (statText != null)
         {

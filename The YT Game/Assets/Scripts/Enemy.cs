@@ -10,6 +10,10 @@ public class Enemy : MonoBehaviour
     public GameObject statBoxPrefab; // 스탯 상자 프리팹
     public float despawnDistance = 30f; // 플레이어와의 거리
     public TextMeshProUGUI healthText; // 적 체력 텍스트
+    public AudioClip hitSound; // 적이 맞았을 때의 사운드
+    public AudioClip deathSound; // 적이 죽었을 때의 사운드
+    public float hitSoundVolume = 1.0f; // 맞았을 때 사운드 볼륨
+    public float deathSoundVolume = 1.0f; // 죽었을 때 사운드 볼륨
 
     private Transform player; // 플레이어의 위치를 저장할 변수
 
@@ -32,6 +36,13 @@ public class Enemy : MonoBehaviour
     {
         health -= amount;
         UpdateHealthText();
+        
+        // 적이 맞았을 때의 사운드 재생
+        if (hitSound != null)
+        {
+            AudioHelper.PlayClipAtPoint(hitSound, transform.position, hitSoundVolume);
+        }
+
         if (health <= 0f)
         {
             Die();
@@ -40,32 +51,20 @@ public class Enemy : MonoBehaviour
 
     public void Die()
     {
+        // 적이 죽었을 때의 사운드 재생
+        if (deathSound != null)
+        {
+            AudioHelper.PlayClipAtPoint(deathSound, transform.position, deathSoundVolume);
+        }
+
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
         {
             gameManager.EnemyDefeated(scoreValue);
+            gameManager.GenerateStatBox(transform.position); // 적을 죽였을 때 스탯 박스 생성
         }
-
-        // 스탯 상자 생성
-        GenerateStatBox();
 
         Destroy(gameObject);
-    }
-
-    void GenerateStatBox()
-    {
-        if (statBoxPrefab != null)
-        {
-            GameObject statBox = Instantiate(statBoxPrefab, transform.position, Quaternion.identity);
-            StatBox statBoxScript = statBox.GetComponent<StatBox>();
-            TextMeshProUGUI statText = statBox.GetComponentInChildren<TextMeshProUGUI>();
-
-            // 스탯 타입과 증가량을 랜덤으로 설정
-            statBoxScript.statType = (StatBox.StatType)Random.Range(0, System.Enum.GetValues(typeof(StatBox.StatType)).Length);
-            statBoxScript.amount = Random.Range(1, 5); // 예시: 1에서 5 사이의 랜덤 값
-            statBoxScript.statText = statText; // 텍스트 컴포넌트를 할당
-            statBoxScript.UpdateStatText(); // 스탯 정보를 업데이트
-        }
     }
 
     void UpdateHealthText()
@@ -76,3 +75,4 @@ public class Enemy : MonoBehaviour
         }
     }
 }
+

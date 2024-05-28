@@ -4,13 +4,17 @@ using UnityEngine;
 
 public class StatChoiceGroup : MonoBehaviour
 {
-    public GameObject[] statChoices;
+    public GameObject[] statChoices; // 선택지 오브젝트 배열
 
-    public void DisableChoices()
+    public void ChooseStat(GameObject chosenStat)
     {
-        foreach (GameObject choice in statChoices)
+        foreach (var choice in statChoices)
         {
-            choice.SetActive(false);
+            if (choice != null)
+            {
+                Destroy(choice); // 모든 선택지 제거
+            }
         }
+        Destroy(gameObject); // 그룹 오브젝트 제거
     }
 }

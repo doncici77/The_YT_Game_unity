@@ -4,20 +4,27 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float health = 100f;
+    public float health = 100f; // 현재 체력
     public float maxHealth = 100f; // 최대 체력
-    public float moveSpeed = 5f;
+    public float moveSpeed = 5f; // 이동 속도
     public float slowMoveSpeed = 2f; // 전진 속도가 줄어든 상태의 속도
-    public float strafeSpeed = 2f;
-    public GameObject bulletPrefab;
-    public Transform bulletSpawnPoint;
-    public float fireRate = 1f;
-    public float bulletDamage = 10f;
+    public float strafeSpeed = 2f; // 좌우 이동 속도
+    public GameObject bulletPrefab; // 총알 프리팹
+    public Transform bulletSpawnPoint; // 총알 발사 위치
+    public float fireRate = 1f; // 공격 속도
+    public float bulletDamage = 10f; // 총알 데미지
     public float attackRange = 50f; // 총알 최대 거리
+    public AudioClip fireSound; // 총알 발사 사운드 클립
 
-    private float nextFireTime = 0f;
-    private bool isGameOver = false;
+    private float nextFireTime = 0f; // 다음 공격 시간
+    private bool isGameOver = false; // 게임 오버 상태
     private bool isSlowed = false; // 전진 속도가 줄어든 상태인지 여부
+    private AudioSource audioSource; // 오디오 소스 컴포넌트
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
@@ -50,6 +57,12 @@ public class PlayerController : MonoBehaviour
         {
             bulletScript.damage = bulletDamage;
             bulletScript.maxDistance = attackRange; // 총알 최대 거리 설정
+        }
+
+        // 총알 발사 사운드 재생
+        if (fireSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(fireSound);
         }
     }
 
@@ -117,7 +130,7 @@ public class PlayerController : MonoBehaviour
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
         {
-            gameManager.uiManager.ShowGameOver();
+            gameManager.uiManager.ShowGameOver("GAME OVER! Press 'R' to Restart");
         }
         // 게임 일시정지
         Time.timeScale = 0f;
